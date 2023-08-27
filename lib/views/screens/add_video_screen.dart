@@ -1,10 +1,27 @@
+import 'dart:io';
 import 'dart:js';
 
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:tiktok_app/constants.dart';
+import 'package:tiktok_app/views/screens/confirm_screen.dart';
 
 class AddVideoScreen extends StatelessWidget {
   const AddVideoScreen({Key? key}) : super(key: key);
+
+  pickVideo(ImageSource source, BuildContext context) async {
+    final video = await ImagePicker().pickVideo(source: source);
+    if (video != null) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => ConfirmScreen(
+            videoFile: File(video.path),
+            videoPath: video.path,
+          ),
+        ),
+      );
+    }
+  }
 
   showOptionsDialog(BuildContext context) {
     return showDialog(
@@ -12,7 +29,7 @@ class AddVideoScreen extends StatelessWidget {
       builder: (context) => SimpleDialog(
         children: [
           SimpleDialogOption(
-            onPressed: () {},
+            onPressed: () => pickVideo(ImageSource.gallery, context),
             child: const Row(
               children: [
                 Icon(
@@ -22,6 +39,44 @@ class AddVideoScreen extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Text(
                     'Gallery',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SimpleDialogOption(
+            onPressed: () => pickVideo(ImageSource.camera, context),
+            child: const Row(
+              children: [
+                Icon(
+                  Icons.camera_alt,
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'Camera',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SimpleDialogOption(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Row(
+              children: [
+                Icon(
+                  Icons.cancel,
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'Cancel',
                     style: TextStyle(
                       fontSize: 20,
                     ),
