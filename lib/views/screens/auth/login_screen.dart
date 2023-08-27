@@ -37,7 +37,7 @@ class LogInScreen extends StatelessWidget {
             const SizedBox(height: 25),
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.only(left: 25, right: 25),
+              margin: const EdgeInsets.only(left: 35, right: 35),
               child: TextInputField(
                   controller: emailController,
                   labelText: 'Email',
@@ -46,7 +46,7 @@ class LogInScreen extends StatelessWidget {
             const SizedBox(height: 25),
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.symmetric(horizontal: 25),
+              margin: const EdgeInsets.symmetric(horizontal: 35),
               child: TextInputField(
                 controller: passwordController,
                 labelText: 'Password',
@@ -57,7 +57,7 @@ class LogInScreen extends StatelessWidget {
             const SizedBox(height: 30),
             Container(
               //alignment: Alignment.center,
-              width: MediaQuery.of(context).size.width - 40,
+              width: MediaQuery.of(context).size.width - 70,
               height: 50,
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
