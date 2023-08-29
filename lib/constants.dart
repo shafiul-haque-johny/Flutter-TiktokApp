@@ -6,11 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tiktok_app/controllers/auth_controller.dart';
 import 'package:tiktok_app/views/screens/add_video_screen.dart';
+import 'package:tiktok_app/views/screens/video_screen.dart';
 
-const pages = [
-  Text('Home Screen'),
+List pages = [
+  VideoScreen(),
   Text('Search Screen'),
-  AddVideoScreen(),
+  const AddVideoScreen(),
   Text('Messages Screen'),
   Text('Profile Screen'),
 ];
