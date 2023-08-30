@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tiktok_app/controllers/search_controller.dart';
+import '../../controllers/search_controller.dart';
 import 'package:tiktok_app/models/user.dart';
 import 'package:tiktok_app/views/screens/profile_screen.dart';
+import 'package:flutter/material.dart' hide Action;
+
+//final search = SearchController();
 
 class SearchScreen extends StatelessWidget {
   SearchScreen({Key? key}) : super(key: key);
@@ -25,7 +28,7 @@ class SearchScreen extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              onFieldSubmitted: (value) => searchController.searchedUser(value),
+              onFieldSubmitted: (value) => searchController.searchUser(value),
             ),
           ),
           body: searchController.searchedUsers.isEmpty

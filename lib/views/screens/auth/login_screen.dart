@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:tiktok_app/constants.dart';
+import 'package:tiktok_app/views/screens/auth/signup_screen.dart';
 import 'package:tiktok_app/views/widgets/text_input_feild.dart';
 
 class LogInScreen extends StatelessWidget {
@@ -95,9 +96,11 @@ class LogInScreen extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {
-                    print(' Go to signup');
-                  },
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => SignUpScreen(),
+                    ),
+                  ),
                   child: GradientText(
                     'Register',
                     style: const TextStyle(
