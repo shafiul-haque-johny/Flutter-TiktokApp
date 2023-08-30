@@ -5,8 +5,6 @@ import 'package:tiktok_app/models/user.dart';
 import 'package:tiktok_app/views/screens/profile_screen.dart';
 import 'package:flutter/material.dart' hide Action;
 
-//final search = SearchController();
-
 class SearchScreen extends StatelessWidget {
   SearchScreen({Key? key}) : super(key: key);
 

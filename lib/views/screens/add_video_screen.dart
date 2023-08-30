@@ -1,10 +1,10 @@
 import 'dart:io';
-import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:tiktok_app/constants.dart';
 import 'package:tiktok_app/views/screens/confirm_screen.dart';
+
+import '../../colors.dart';
 
 class AddVideoScreen extends StatelessWidget {
   const AddVideoScreen({Key? key}) : super(key: key);

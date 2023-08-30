@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_app/constants.dart';
 
+import '../../colors.dart';
 import '../widgets/custom_icon.dart';
 
 class HomeScreen extends StatefulWidget {

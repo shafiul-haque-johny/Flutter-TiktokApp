@@ -12,30 +12,19 @@ import 'package:tiktok_app/views/screens/video_screen.dart';
 
 List pages = [
   VideoScreen(),
+  null,
   SearchScreen(),
   const AddVideoScreen(),
   const Text('Messages Screen'),
   ProfileScreen(uid: authController.user.uid),
 ];
 
-// COLORS
-const backgroundColor = Colors.black;
-var buttonColor = Colors.red[400];
-const borderColor = Colors.grey;
-
-// Gradient
-const Color gradient1 = Color.fromRGBO(24, 63, 215, 1.0);
-const Color gradient2 = Color.fromRGBO(236, 156, 9, 1.0);
-const Color gradient3 = Color.fromRGBO(50, 225, 11, 1.0);
-
-const Color gradient4 = Color.fromRGBO(8, 232, 232, 1.0);
-const Color gradient5 = Color.fromRGBO(145, 9, 236, 1.0);
-const Color gradient6 = Color.fromRGBO(200, 229, 7, 1.0);
-
 // Firebase
+
 var firebaseAuth = FirebaseAuth.instance;
 var firebaseStorage = FirebaseStorage.instance;
 var firestore = FirebaseFirestore.instance;
 
 // Controller
+
 var authController = AuthController.instance;

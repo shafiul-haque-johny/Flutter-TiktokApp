@@ -1,12 +1,12 @@
 // Create Firebase app, add to web, then copy those api (key, domain, projectId, bucket, msgSenderId, appId.
 
 class Configurations {
-  static const _apiKey = "AIzaSyCWGcq7K9btfdDA0Pr__B6uM3lI1YBuh2k";
-  static const _authDomain = "tiktok-app-4f063.firebaseapp.com";
-  static const _projectId = "tiktok-app-4f063";
-  static const _storageBucket = "tiktok-app-4f063.appspot.com";
-  static const _messagingSenderId = "503867475928";
-  static const _appId = "1:503867475928:web:f9e1009534a2764c1c94ad";
+  static const _apiKey = "Your Values";
+  static const _authDomain = "Your Values";
+  static const _projectId = "Your Values";
+  static const _storageBucket = "Your Values";
+  static const _messagingSenderId = "Your Values";
+  static const _appId = "Your Values";
 
 //Make some getter functions
   String get apiKey => _apiKey;

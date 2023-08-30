@@ -1,11 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tiktok_app/constants.dart';
 import 'package:tiktok_app/controllers/auth_controller.dart';
-import 'package:tiktok_app/views/screens/auth/login_screen.dart';
-import 'package:tiktok_app/views/screens/auth/signup_screen.dart';
 import 'package:tiktok_app/web_config.dart';
+import 'package:tiktok_app/welcome_page.dart';
+
+import 'colors.dart';
 
 final configurations = Configurations();
 
@@ -37,8 +37,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
       ),
-      home: LogInScreen(),
-      //home: SignUpScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }

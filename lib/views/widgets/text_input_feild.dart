@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tiktok_app/constants.dart';
+
+import '../../colors.dart';
 
 class TextInputField extends StatelessWidget {
   final TextEditingController controller;
